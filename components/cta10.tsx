@@ -55,12 +55,20 @@ const Cta10 = ({
             <div className="flex flex-col gap-2 sm:flex-row">
               {buttons.secondary && (
                 <Button variant="outline" asChild>
-                  <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
+                  <a
+                    href={buttons.secondary.url}
+                    title={buttons.secondary.text}
+                  >
+                    {buttons.secondary.text}
+                  </a>
                 </Button>
               )}
               {buttons.primary && (
                 <Button asChild variant="default" size="lg">
-                  <a href={buttons.primary.url}>
+                  <a
+                    href={buttons.primary.url}
+                    title={buttons.primary.text}
+                  >
                     {buttons.primary.text}
                   </a>
                 </Button>

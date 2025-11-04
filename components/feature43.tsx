@@ -100,7 +100,9 @@ const Feature43 = ({
         {buttonUrl && (
           <div className="mt-16 flex justify-center">
             <Button size="lg" asChild>
-              <a href={buttonUrl}>{buttonText}</a>
+              <a href={buttonUrl} title={buttonText}>
+                {buttonText}
+              </a>
             </Button>
           </div>
         )}

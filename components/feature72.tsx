@@ -75,6 +75,7 @@ const Feature72 = ({
               <a
                 href={buttonUrl}
                 className="group flex items-center font-medium md:text-base lg:text-lg"
+                title={buttonText}
               >
                 {buttonText}
                 <ArrowRight />
@@ -88,7 +89,7 @@ const Feature72 = ({
               key={feature.id}
               className="border-border flex flex-col overflow-clip rounded-xl border"
             >
-              <a href={feature.url}>
+              <a href={feature.url} title={feature.heading}>
                 <img
                   src={feature.image}
                   alt={feature.heading}

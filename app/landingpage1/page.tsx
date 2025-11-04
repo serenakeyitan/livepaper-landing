@@ -59,10 +59,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@kael_ai",
+    creator: "@kael_ai",
     title: pageTitle,
     description: pageDescription,
     images: [
-      "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+      {
+        url: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
+        width: 1200,
+        height: 630,
+        alt: "Kael AI 论文助手产品展示",
+      },
     ],
   },
   robots: {

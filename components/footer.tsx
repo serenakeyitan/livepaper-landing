@@ -76,6 +76,7 @@ export default function FooterSection() {
                         <Link
                             href="/"
                             aria-label="go home"
+                            title="返回首页"
                             className="block size-fit">
                             <Logo />
                         </Link>
@@ -91,6 +92,7 @@ export default function FooterSection() {
                                     <Link
                                         key={index}
                                         href={item.href}
+                                        title={item.title}
                                         className="text-muted-foreground hover:text-primary block duration-150">
                                         <span>{item.title}</span>
                                     </Link>
@@ -104,7 +106,7 @@ export default function FooterSection() {
                         <span className="block text-sm font-medium">联系方式</span>
                         <div className="space-y-2 text-sm">
                             <div className="text-muted-foreground">
-                                邮箱：<a href="mailto:support@kael.ai" className="hover:text-primary">support@kael.ai</a>
+                                邮箱：<a href="mailto:support@kael.ai" className="hover:text-primary" title="发送邮件至 support@kael.ai">support@kael.ai</a>
                             </div>
                             <div className="flex items-center gap-4 text-muted-foreground">
                                 <span>Twitter / 微信公众号</span>
@@ -119,6 +121,7 @@ export default function FooterSection() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="X/Twitter"
+                                title="前往 Kael 的 Twitter"
                                 className="text-muted-foreground hover:text-primary block">
                                 <svg
                                     className="size-5"

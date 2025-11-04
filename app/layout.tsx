@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = "https://www.kael.im";
@@ -62,6 +63,17 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-W5F1Y6479G"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-W5F1Y6479G');`}
+        </Script>
         {children}
       </body>
     </html>
