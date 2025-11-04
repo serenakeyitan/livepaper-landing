@@ -14,6 +14,7 @@ import { Casestudies2 } from "@/components/casestudies2";
 import { Cta10 } from "@/components/cta10";
 import { Faq1 } from "@/components/faq1";
 import FooterSection from "@/components/footer";
+import { Process1 } from "@/components/process1";
 
 export default function LandingPage1() {
   return (
@@ -122,6 +123,8 @@ export default function LandingPage1() {
           },
         ]}
       />
+
+      <Process1 />
 
 <Testimonial10
         title="被全球研究者信赖"
