@@ -9,6 +9,9 @@ import { Hero1 } from "@/components/hero1";
 import { Feature43 } from "@/components/feature43";
 import { Feature197 } from "@/components/feature197";
 import { Compare7 } from "@/components/compare7";
+import { Testimonial10 } from "@/components/testimonial10";
+import { Casestudies2 } from "@/components/casestudies2";
+import { Cta10 } from "@/components/cta10";
 import { Faq1 } from "@/components/faq1";
 
 export default function LandingPage1() {
@@ -172,6 +175,60 @@ export default function LandingPage1() {
         ]}
       />
 
+      <Testimonial10
+        title="被全球研究者信赖"
+        stats={[
+          { icon: "🎓", value: "10,000+ 研究者正在使用" },
+          { icon: "📄", value: "500,000+ 篇论文已被解析" },
+          { icon: "⭐", value: "4.8/5 用户评分" },
+        ]}
+        testimonials={[
+          {
+            quote:
+              "终于可以同时处理整个文献集了。之前用过的工具处理 10 篇以上论文就开始出错。Kael 让我一次性导入 30 篇综述，质量完全没下降。这才是真正为研究者设计的工具。",
+            author: {
+              name: "Dr. Zhang Wei",
+              role: "计算机科学博士生，清华大学",
+            },
+          },
+          {
+            quote:
+              "公式解析太准确了。作为物理专业的学生，我需要理解大量复杂公式。Kael 不仅能识别，还能逐步解释推导过程。节省了我无数时间。",
+            author: {
+              name: "Sarah Chen",
+              role: "物理学硕士，MIT",
+            },
+          },
+        ]}
+      />
+
+      <Casestudies2
+        title="适合每一种研究需求"
+        useCases={[
+          {
+            icon: "📚",
+            title: "文献综述",
+            description: "快速梳理领域发展脉络，找到关键研究",
+          },
+          {
+            icon: "🔬",
+            title: "实验设计",
+            description: "对比不同方法论，理解实验细节",
+          },
+          {
+            icon: "✍️",
+            title: "论文写作",
+            description: "精准引用，避免误读原文",
+          },
+          {
+            icon: "🎓",
+            title: "课程学习",
+            description: "深入理解教材和补充阅读材料",
+          },
+        ]}
+      />
+
+     
       <Faq1
         heading="常见问题解答"
         items={[
@@ -207,6 +264,23 @@ export default function LandingPage1() {
           },
         ]}
       />
+       <Cta10
+        heading="准备好提升你的研究效率了吗？"
+        description="加入 10,000+ 研究者的行列，让 Kael 成为你的智能研究伙伴"
+        buttons={{
+          primary: {
+            text: "免费开始使用 ➜",
+            url: "#",
+          },
+        }}
+        subtext="无需信用卡 · 3 分钟完成设置"
+        trustLabels={[
+          "30 天无理由退款",
+          "数据完全加密",
+          "随时取消订阅",
+        ]}
+      />
+
     </main>
   );
 }

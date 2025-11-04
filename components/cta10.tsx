@@ -13,6 +13,8 @@ interface Cta10Props {
       url: string;
     };
   };
+  subtext?: string;
+  trustLabels?: string[];
 }
 
 const Cta10 = ({
@@ -24,6 +26,8 @@ const Cta10 = ({
       url: "https://www.shadcnblocks.com",
     },
   },
+  subtext,
+  trustLabels,
 }: Cta10Props) => {
   return (
     <section className="py-32">
@@ -33,20 +37,39 @@ const Cta10 = ({
             <h3 className="mb-3 text-2xl font-semibold md:mb-4 md:text-4xl lg:mb-6">
               {heading}
             </h3>
-            <p className="text-muted-foreground max-w-xl lg:text-lg">
+            <p className="text-muted-foreground mb-6 max-w-xl lg:text-lg">
               {description}
             </p>
-          </div>
-          <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            {buttons.secondary && (
-              <Button variant="outline" asChild>
-                <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
-              </Button>
+            {trustLabels && trustLabels.length > 0 && (
+              <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                {trustLabels.map((label, index) => (
+                  <span key={index} className="flex items-center gap-1">
+                    <span className="text-primary">✓</span>
+                    <span>{label}</span>
+                  </span>
+                ))}
+              </div>
             )}
-            {buttons.primary && (
-              <Button asChild variant="default" size="lg">
-                <a href={buttons.primary.url}>{buttons.primary.text}</a>
-              </Button>
+          </div>
+          <div className="flex shrink-0 flex-col gap-4">
+            <div className="flex flex-col gap-2 sm:flex-row">
+              {buttons.secondary && (
+                <Button variant="outline" asChild>
+                  <a href={buttons.secondary.url}>{buttons.secondary.text}</a>
+                </Button>
+              )}
+              {buttons.primary && (
+                <Button asChild variant="default" size="lg">
+                  <a href={buttons.primary.url}>
+                    {buttons.primary.text}
+                  </a>
+                </Button>
+              )}
+            </div>
+            {subtext && (
+              <p className="text-muted-foreground text-center text-sm sm:text-left">
+                {subtext}
+              </p>
             )}
           </div>
         </div>
