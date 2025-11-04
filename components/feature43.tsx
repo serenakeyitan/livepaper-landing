@@ -20,6 +20,7 @@ interface Feature43Props {
   features?: Feature[];
   buttonText?: string;
   buttonUrl?: string;
+  columns?: number;
 }
 
 const Feature43 = ({
@@ -64,7 +65,17 @@ const Feature43 = ({
   ],
   buttonText = "More Features",
   buttonUrl = "https://shadcnblocks.com",
+  columns = 3,
 }: Feature43Props) => {
+  const gridColsClass = {
+    1: "lg:grid-cols-1",
+    2: "lg:grid-cols-2",
+    3: "lg:grid-cols-3",
+    4: "lg:grid-cols-4",
+    5: "lg:grid-cols-5",
+    6: "lg:grid-cols-6",
+  }[columns] || "lg:grid-cols-3";
+
   return (
     <section className="py-32">
       <div className="container">
@@ -75,7 +86,7 @@ const Feature43 = ({
             </h2>
           </div>
         )}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className={`grid gap-10 md:grid-cols-2 ${gridColsClass}`}>
           {features.map((feature, i) => (
             <div key={i} className="flex flex-col">
               <div className="bg-accent mb-5 flex size-16 items-center justify-center rounded-full">

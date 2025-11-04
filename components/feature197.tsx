@@ -14,13 +14,16 @@ interface FeatureItem {
   title: string;
   image: string;
   description: string;
+  highlights?: string[];
 }
 
 interface Feature197Props {
+  title?: string;
   features: FeatureItem[];
 }
 
 const Feature197 = ({
+  title,
   features = [
     {
       id: 1,
@@ -65,6 +68,13 @@ const Feature197 = ({
   return (
     <section className="py-32">
       <div className="container mx-auto">
+        {title && (
+          <div className="mb-12 text-center">
+            <h2 className="text-pretty text-4xl font-medium lg:text-5xl">
+              {title}
+            </h2>
+          </div>
+        )}
         <div className="mb-12 flex w-full items-start justify-between gap-12">
           <div className="w-full md:w-1/2">
             <Accordion type="single" className="w-full" defaultValue="item-1">
@@ -91,6 +101,16 @@ const Feature197 = ({
                     <p className="text-muted-foreground text-base">
                       {tab.description}
                     </p>
+                    {tab.highlights && tab.highlights.length > 0 && (
+                      <ul className="text-muted-foreground mt-4 space-y-2 text-sm">
+                        {tab.highlights.map((highlight, index) => (
+                          <li key={index} className="flex items-start">
+                            <span className="mr-2 text-primary">✓</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     <div className="mt-4 md:hidden">
                       <img
                         src={tab.image}

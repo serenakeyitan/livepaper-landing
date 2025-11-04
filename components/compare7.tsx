@@ -8,122 +8,86 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
-const Compare7 = () => {
+interface ComparisonCell {
+  icon: "✅" | "⚠️" | "❌";
+  text: string;
+  iconColor?: "green" | "yellow" | "red";
+}
+
+interface ComparisonRow {
+  feature: string;
+  cells: ComparisonCell[];
+}
+
+interface Compare7Props {
+  title: string;
+  columns: string[];
+  rows: ComparisonRow[];
+  highlightedColumnIndex?: number;
+}
+
+const Compare7 = ({
+  title,
+  columns,
+  rows,
+  highlightedColumnIndex = 0,
+}: Compare7Props) => {
+  const getIconColorClass = (iconColor?: string) => {
+    switch (iconColor) {
+      case "green":
+        return "text-green-600";
+      case "yellow":
+        return "text-yellow-600";
+      case "red":
+        return "text-red-600";
+      default:
+        return "text-foreground";
+    }
+  };
+
   return (
     <section className="py-32">
       <div className="container">
-        <h2 className="mb-4 text-center text-4xl font-semibold">Compare Us</h2>
-        <p className="text-muted-foreground mb-8 text-center">
-          A modern framework for building websites that is better than the
-          competition.
-        </p>
-        <div className="mx-auto max-w-3xl overflow-x-auto">
+        <h2 className="mb-4 text-center text-4xl font-semibold">{title}</h2>
+        <div className="mx-auto max-w-5xl overflow-x-auto">
           <Table className="rounded border text-left shadow-lg">
             <TableHeader>
               <TableRow>
-                <TableHead></TableHead>
-                <TableHead className="bg-muted px-6 py-4 font-semibold">
-                  Shadcn
-                </TableHead>
-                <TableHead className="px-6 py-4 font-semibold">
-                  Bootstrap
-                </TableHead>
+                <TableHead className="px-6 py-4 font-semibold">功能</TableHead>
+                {columns.map((column, index) => (
+                  <TableHead
+                    key={index}
+                    className={`px-6 py-4 font-semibold ${
+                      index === highlightedColumnIndex ? "bg-muted" : ""
+                    }`}
+                  >
+                    {column}
+                  </TableHead>
+                ))}
               </TableRow>
             </TableHeader>
             <TableBody className="text-foreground">
-              <TableRow>
-                <TableCell className="px-6 py-4">Design System</TableCell>
-                <TableCell className="bg-muted px-6 py-4">
-                  Modern, Utility-first
-                </TableCell>
-                <TableCell className="px-6 py-4">
-                  Classic, Component-based
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">Customization</TableCell>
-                <TableCell className="bg-muted px-6 py-4">
-                  Highly customizable
-                </TableCell>
-                <TableCell className="px-6 py-4">Limited by default</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">Dark Mode</TableCell>
-                <TableCell className="bg-muted px-6 py-4">Built-in</TableCell>
-                <TableCell className="px-6 py-4">
-                  Requires extra setup
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">TypeScript Support</TableCell>
-                <TableCell className="bg-muted px-6 py-4">
-                  First-class
-                </TableCell>
-                <TableCell className="px-6 py-4">Partial</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">Accessibility</TableCell>
-                <TableCell className="bg-muted px-6 py-4">
-                  Focus on a11y
-                </TableCell>
-                <TableCell className="px-6 py-4">Basic</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">Component Count</TableCell>
-                <TableCell className="bg-muted px-6 py-4">30+</TableCell>
-                <TableCell className="px-6 py-4">25+</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">License</TableCell>
-                <TableCell className="bg-muted px-6 py-4">MIT</TableCell>
-                <TableCell className="px-6 py-4">MIT</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">Premium Components</TableCell>
-                <TableCell className="bg-muted px-6 py-4">Available</TableCell>
-                <TableCell className="relative px-6 py-4">
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <span className="cursor-pointer underline decoration-dotted">
-                        Not included
+              {rows.map((row, rowIndex) => (
+                <TableRow key={rowIndex}>
+                  <TableCell className="px-6 py-4">{row.feature}</TableCell>
+                  {row.cells.map((cell, cellIndex) => (
+                    <TableCell
+                      key={cellIndex}
+                      className={`px-6 py-4 ${
+                        cellIndex === highlightedColumnIndex ? "bg-muted" : ""
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <span className={getIconColorClass(cell.iconColor)}>
+                          {cell.icon}
+                        </span>
+                        <span>{cell.text}</span>
                       </span>
-                    </TooltipTrigger>
-                    <TooltipContent sideOffset={8} className="max-w-xs">
-                      <span className="mb-1 block font-semibold">
-                        Premium Only
-                      </span>
-                      Some advanced components are only available in paid
-                      versions or require third-party libraries.
-                    </TooltipContent>
-                  </Tooltip>
-                </TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="px-6 py-4">Figma Kit</TableCell>
-                <TableCell className="bg-muted px-6 py-4">Yes</TableCell>
-                <TableCell className="relative px-6 py-4">
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <span className="text-muted-foreground cursor-pointer underline decoration-dotted">
-                        No
-                      </span>
-                    </TooltipTrigger>
-                    <TooltipContent sideOffset={8} className="max-w-xs">
-                      <span className="mb-1 block font-semibold">
-                        Figma Kit Unavailable
-                      </span>
-                      Bootstrap does not provide an official Figma kit, but
-                      community kits may exist.
-                    </TooltipContent>
-                  </Tooltip>
-                </TableCell>
-              </TableRow>
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </div>

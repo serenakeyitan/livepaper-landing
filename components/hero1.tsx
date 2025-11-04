@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 interface Hero1Props {
   badge?: string;
   heading: string;
+  subheading?: string;
   description: string;
   buttons?: {
     primary?: {
@@ -26,6 +27,7 @@ interface Hero1Props {
 const Hero1 = ({
   badge = "✨ Your Website Builder",
   heading = "Blocks Built With Shadcn & Tailwind",
+  subheading,
   description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
   buttons = {
     primary: {
@@ -56,6 +58,11 @@ const Hero1 = ({
             <h1 className="my-6 text-pretty text-4xl font-bold lg:text-6xl">
               {heading}
             </h1>
+            {subheading && (
+              <p className="text-muted-foreground mb-4 text-lg font-medium lg:text-xl">
+                {subheading}
+              </p>
+            )}
             <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
               {description}
             </p>
