@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { START_FOR_FREE_URL } from "./constants";
 import { Check } from "lucide-react";
 
 const FinalCTA = () => {
@@ -27,8 +28,10 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex justify-center pt-2 sm:pt-4 animate-fade-in-up animation-delay-300">
-            <Button variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 hover:scale-110 transition-transform duration-300 w-full sm:w-auto">
-              Start for Free ➜
+            <Button asChild variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-5 lg:px-10 lg:py-7 hover:scale-110 transition-transform duration-300 w-full sm:w-auto">
+              <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
+                Start for Free ➜
+              </a>
             </Button>
           </div>
 

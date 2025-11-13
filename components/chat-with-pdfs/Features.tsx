@@ -2,6 +2,7 @@
 
 import { Check, CheckSquare, FileText, Search, Square, Upload, X, ArrowRight, BookOpen, Box, CheckCircle, Link, MessageSquare, Repeat, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { START_FOR_FREE_URL } from "./constants";
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -77,8 +78,10 @@ const Features = () => {
               </div>
             </div>
             <div className="pt-4 sm:pt-6">
-              <Button variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto">
-                Start for Free
+              <Button asChild variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto">
+                <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
+                  Start for Free
+                </a>
               </Button>
             </div>
           </div>
@@ -392,8 +395,10 @@ const Features = () => {
               </div>
             </div>
             <div className="pt-4 sm:pt-6">
-              <Button variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto">
-                Start for Free
+              <Button asChild variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto">
+                <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
+                  Start for Free
+                </a>
               </Button>
             </div>
           </div>
