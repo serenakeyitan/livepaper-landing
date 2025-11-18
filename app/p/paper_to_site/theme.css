@@ -1,0 +1,15 @@
+.paper-to-site-theme {
+  --primary: rgb(11 155 203);
+  --primary-foreground: rgb(255 255 255);
+  --accent: rgb(11 155 203);
+  --accent-foreground: rgb(8 8 12);
+  --ring: rgb(11 155 203);
+}
+
+.dark .paper-to-site-theme {
+  --primary: rgb(11 155 203);
+  --primary-foreground: rgb(8 8 12);
+  --accent: rgb(11 155 203);
+  --accent-foreground: rgb(8 8 12);
+  --ring: rgb(11 155 203);
+}

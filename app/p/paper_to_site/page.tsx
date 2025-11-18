@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import "./theme.css";
+
 import Header from "@/components/paper-to-site/Header";
 import Hero from "@/components/paper-to-site/Hero";
 import Features from "@/components/paper-to-site/Features";
