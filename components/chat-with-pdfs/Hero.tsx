@@ -44,7 +44,7 @@ const Hero = () => {
                       alt="Web Extension"
                       className="w-6 h-6 sm:w-7 sm:h-7 lg:w-9 lg:h-9 mr-2 sm:mr-3 object-contain"
                     />
-                    Start for Free
+                   Get 1 month Pro Plan for free
                   </a>
                 </Button>
               </div>

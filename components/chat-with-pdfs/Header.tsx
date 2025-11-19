@@ -39,7 +39,7 @@ const Header = () => {
             
             <Button asChild variant="hero" size="default" className="rounded-full hover:scale-105 transition-all duration-300 px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-6 text-sm sm:text-base lg:text-lg">
               <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
-                Start for Free
+                Get 1 month Pro Plan for free
               </a>
             </Button>
           </div>

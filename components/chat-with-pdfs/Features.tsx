@@ -80,7 +80,7 @@ const Features = () => {
             <div className="pt-4 sm:pt-6">
               <Button asChild variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto">
                 <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
-                  Start for Free
+                Get 1 month Pro Plan for free
                 </a>
               </Button>
             </div>
@@ -397,7 +397,7 @@ const Features = () => {
             <div className="pt-4 sm:pt-6">
               <Button asChild variant="hero" size="lg" className="rounded-xl text-sm sm:text-base lg:text-lg px-6 py-4 sm:px-8 sm:py-6 w-full sm:w-auto">
                 <a href={START_FOR_FREE_URL} target="_blank" rel="noopener noreferrer">
-                  Start for Free
+                Get 1 month Pro Plan for free
                 </a>
               </Button>
             </div>
