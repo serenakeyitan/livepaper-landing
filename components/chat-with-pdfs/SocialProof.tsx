@@ -113,14 +113,14 @@ const SocialProof = () => {
                         </p>
                       )}
                     </blockquote>
-                    <div className="pt-3 sm:pt-4 lg:pt-5 border-t border-neutral-200 dark:border-neutral-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        <img 
-                          src={testimonial.profilePic} 
+                    <div className="pt-3 sm:pt-4 lg:pt-5 border-t border-neutral-200 dark:border-neutral-700 flex flex-row items-center justify-between gap-2 sm:gap-3">
+                      <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                        <img
+                          src={testimonial.profilePic}
                           alt={testimonial.author}
                           className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-primary/20 flex-shrink-0"
                         />
-                        <div className="min-w-0">
+                        <div className="min-w-0 flex-1">
                           <div className="font-bold text-neutral-900 dark:text-white text-base sm:text-lg">
                             {testimonial.author}
                           </div>
@@ -129,7 +129,7 @@ const SocialProof = () => {
                           </div>
                         </div>
                       </div>
-<img
+                      <img
                         src={testimonial.schoolLogo}
                         alt="University Logo"
                         className="h-8 sm:h-10 lg:h-12 object-contain opacity-70 flex-shrink-0"
