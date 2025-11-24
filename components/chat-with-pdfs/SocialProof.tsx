@@ -56,7 +56,7 @@ const SocialProof = () => {
       quote: "This is an entirely new way to express academic work.",
       detail: "",
       author: "Prof. Zhang Wei",
-      title: "AI Lab Director, Tsinghua University",
+      title: "AI Director, Tsinghua University",
       profilePic: PROFILE_ZHANG,
       schoolLogo: SCHOOL_LOGOS.tsinghua,
     },
