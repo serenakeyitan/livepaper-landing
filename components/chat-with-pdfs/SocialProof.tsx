@@ -9,7 +9,7 @@ const PROFILE_SARAH = "/chat-with-pdfs/profile-sarah.jpg";
 const PROFILE_LIMING = "/chat-with-pdfs/profile-liming.jpg";
 const SCHOOL_LOGOS = {
   tsinghua: "/chat-with-pdfs/logos/tsinghua-new.png",
-  peking: "/chat-with-pdfs/logos/peking.png",
+  peking: "/chat-with-pdfs/logos/Peking_University_seal.png",
   stanford: "/chat-with-pdfs/logos/Stanford_Cardinal_logo.svg.png",
   mit: "/chat-with-pdfs/logos/mit-full.png",
 } as const;
