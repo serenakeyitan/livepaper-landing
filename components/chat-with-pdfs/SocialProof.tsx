@@ -132,7 +132,7 @@ const SocialProof = () => {
                       <img
                         src={testimonial.schoolLogo}
                         alt="University Logo"
-                        className="h-7 sm:h-9 lg:h-10 object-contain opacity-70 flex-shrink-0"
+                        className="h-6 sm:h-8 lg:h-9 object-contain opacity-70 flex-shrink-0"
                       />
                     </div>
                   </CardContent>
