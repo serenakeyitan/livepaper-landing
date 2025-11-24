@@ -72,15 +72,15 @@ const HowItWorks = () => {
               </div>
 
               <div className="mt-6">
-                <div className="rounded-2xl border-2 border-primary/30 bg-primary/5 dark:bg-primary/10 p-6 flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/20">
-                    <FileText className="w-8 h-8 text-primary" />
+                <div className="rounded-2xl border-2 border-primary/30 bg-primary/5 dark:bg-primary/10 p-3 sm:p-6 flex items-center gap-2 sm:gap-4">
+                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-primary/20 flex-shrink-0">
+                    <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <p className="font-bold text-lg text-neutral-900 dark:text-white">attention_is_all_you_need.pdf</p>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">2.4 MB • 15 pages • Ready to transform</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-sm sm:text-lg text-neutral-900 dark:text-white break-words">attention_is_all_you_need.pdf</p>
+                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">2.4 MB • 15 pages • Ready to transform</p>
                   </div>
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
                 </div>
               </div>
             </div>
