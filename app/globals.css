@@ -151,7 +151,7 @@
   }
 }
 
-.chat-with-pdfs-theme {
+.livepaper-theme {
   --background: hsl(220 60% 98%);
   --foreground: hsl(220 20% 10%);
   --card: hsl(0 0% 100%);
@@ -186,7 +186,7 @@
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
 
-.chat-with-pdfs-theme.dark {
+.livepaper-theme.dark {
   --background: hsl(220 25% 8%);
   --foreground: hsl(0 0% 98%);
   --card: hsl(220 20% 12%);

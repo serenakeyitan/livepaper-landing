@@ -5,14 +5,14 @@ import { START_FOR_FREE_URL } from "./constants";
 import { gtagSendEvent } from "./gtag-utils";
 import { Check } from "lucide-react";
 
-const HERO_IMAGE = "/chat-with-pdfs/kael_full_page.png";
-const WEB_EXTENSION_ICON = "/chat-with-pdfs/web-extension-icon.png";
+const HERO_IMAGE = "/livepaper/kael_full_page.png";
+const WEB_EXTENSION_ICON = "/livepaper/web-extension-icon.png";
 const LOGOS = {
-  tsinghua: "/chat-with-pdfs/logos/tsinghua.png",
-  mit: "/chat-with-pdfs/logos/mit.png",
-  peking: "/chat-with-pdfs/logos/peking.png",
-  stanford: "/chat-with-pdfs/logos/Stanford_Cardinal_logo.svg.png",
-  berkeley: "/chat-with-pdfs/logos/berkeley.png",
+  tsinghua: "/livepaper/logos/tsinghua.png",
+  mit: "/livepaper/logos/mit.png",
+  peking: "/livepaper/logos/peking.png",
+  stanford: "/livepaper/logos/Stanford_Cardinal_logo.svg.png",
+  berkeley: "/livepaper/logos/berkeley.png",
 } as const;
 
 const Hero = () => {

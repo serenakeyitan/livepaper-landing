@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
-import Header from "@/components/chat-with-pdfs/Header";
-import Hero from "@/components/chat-with-pdfs/Hero";
-import Features from "@/components/chat-with-pdfs/Features";
-import HowItWorks from "@/components/chat-with-pdfs/HowItWorks";
-import SocialProof from "@/components/chat-with-pdfs/SocialProof";
-import UseCases from "@/components/chat-with-pdfs/UseCases";
-import FAQ from "@/components/chat-with-pdfs/FAQ";
-import FinalCTA from "@/components/chat-with-pdfs/FinalCTA";
-import Footer from "@/components/chat-with-pdfs/Footer";
+import Header from "@/components/livepaper/Header";
+import Hero from "@/components/livepaper/Hero";
+import Features from "@/components/livepaper/Features";
+import HowItWorks from "@/components/livepaper/HowItWorks";
+import SocialProof from "@/components/livepaper/SocialProof";
+import UseCases from "@/components/livepaper/UseCases";
+import FAQ from "@/components/livepaper/FAQ";
+import FinalCTA from "@/components/livepaper/FinalCTA";
+import Footer from "@/components/livepaper/Footer";
 
 const pageTitle = "LivePaper — Turn Your Research Paper Into Motion";
 const pageDescription =
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="chat-with-pdfs-theme min-h-screen bg-background">
+    <div className="livepaper-theme min-h-screen bg-background">
       <Header />
       <main>
         <Hero />

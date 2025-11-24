@@ -4,14 +4,14 @@ import { Users, FileText, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const PROFILE_ZHANG = "/chat-with-pdfs/profile-zhang.jpg";
-const PROFILE_SARAH = "/chat-with-pdfs/profile-sarah.jpg";
-const PROFILE_LIMING = "/chat-with-pdfs/profile-liming.jpg";
+const PROFILE_ZHANG = "/livepaper/profile-zhang.jpg";
+const PROFILE_SARAH = "/livepaper/profile-sarah.jpg";
+const PROFILE_LIMING = "/livepaper/profile-liming.jpg";
 const SCHOOL_LOGOS = {
-  tsinghua: "/chat-with-pdfs/logos/tsinghua-new.png",
-  peking: "/chat-with-pdfs/logos/Peking_University.png",
-  stanford: "/chat-with-pdfs/logos/Stanford_Cardinal_logo.svg.png",
-  mit: "/chat-with-pdfs/logos/mit-full.png",
+  tsinghua: "/livepaper/logos/tsinghua-new.png",
+  peking: "/livepaper/logos/Peking_University.png",
+  stanford: "/livepaper/logos/Stanford_Cardinal_logo.svg.png",
+  mit: "/livepaper/logos/mit-full.png",
 } as const;
 
 const SocialProof = () => {

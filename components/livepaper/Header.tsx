@@ -5,7 +5,7 @@ import { START_FOR_FREE_URL } from "./constants";
 import { gtagSendEvent } from "./gtag-utils";
 import { Globe } from "lucide-react";
 
-const KAEL_LOGO = "/chat-with-pdfs/kael-logo.png";
+const KAEL_LOGO = "/livepaper/kael-logo.png";
 
 const Header = () => {
   return (

@@ -309,7 +309,7 @@ const Features = () => {
                 muted
                 playsInline
               >
-                <source src="/chat-with-pdfs/data-viz-demo.m4v" type="video/mp4" />
+                <source src="/livepaper/data-viz-demo.m4v" type="video/mp4" />
               </video>
             </div>
           </div>
