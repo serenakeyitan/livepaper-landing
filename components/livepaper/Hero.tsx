@@ -34,7 +34,7 @@ const Hero = () => {
               </p>
 
               {/* Feature Checkmarks */}
-              <div className="flex flex-col gap-3 mb-8 lg:mb-0 lg:pt-8 animate-fade-in-up animation-delay-250 max-w-xl mx-auto lg:mx-0">
+              <div className="flex flex-col items-center lg:items-start gap-3 mb-8 lg:mb-0 lg:pt-8 animate-fade-in-up animation-delay-250 max-w-xl mx-auto lg:mx-0">
                 <div className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
                   <Check className="w-5 h-5 text-primary flex-shrink-0" strokeWidth={3} />
                   <span className="text-base sm:text-lg">Interactive visuals</span>
@@ -74,11 +74,11 @@ const Hero = () => {
 
             {/* Right Column - Hero Image */}
             <div className="relative animate-fade-in-right animation-delay-200 mt-4 lg:mt-0">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.02] transition-transform duration-500">
                 <img
                   src={HERO_IMAGE}
                   alt="Kael.im - Interactive quaternion visualization showing dynamic research paper"
-                  className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
